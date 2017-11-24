@@ -1,0 +1,9 @@
+Building WOKE
+
+See doc/readme-qt.rst for instructions on building WOKE QT,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of WOKE.
+
+See doc/build-*.txt for instructions on building woked,
+the intended-for-services, no-graphical-interface, reference
+implementation of WOKE.
