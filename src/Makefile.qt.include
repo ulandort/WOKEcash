@@ -1,0 +1,11 @@
+bin_PROGRAMS += qt/woke-qt
+EXTRA_LIBRARIES += qt/libbitcoinqt.a
+
+RES_IMAGES = \
+  qt/res/images/horiz.png \
+  qt/res/images/mymain.png \
+
+
+RES_CSS = \
+  qt/res/css/default.css
+  

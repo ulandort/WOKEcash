@@ -44,7 +44,12 @@
         <file alias="staking_off">res/icons/staking_off.png</file>
         <file alias="staking_on">res/icons/staking_on.png</file>
     </qresource>
+	<qresource prefix="/css">
+        <file alias="default">res/css/default.css</file>
+    </qresource>
     <qresource prefix="/images">
+		<file alias="horiz">res/images/horiz.png</file>
+		<file alias="mymain">res/images/mymain.png</file>
         <file alias="about">res/images/about.png</file>
         <file alias="splash">res/images/splash3.png</file>
     </qresource>
