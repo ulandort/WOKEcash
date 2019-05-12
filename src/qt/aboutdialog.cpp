@@ -9,13 +9,14 @@ AboutDialog::AboutDialog(QWidget *parent) :
     ui(new Ui::AboutDialog)
 {
     ui->setupUi(this);
+   ui->label->setPixmap(QPixmap(":/images/splash"));
 }
 
 void AboutDialog::setModel(ClientModel *model)
 {
     if(model)
     {
-        ui->versionLabel->setText(model->formatFullVersion());
+       // ui->versionLabel->setText(model->formatFullVersion());
     }
 }
 

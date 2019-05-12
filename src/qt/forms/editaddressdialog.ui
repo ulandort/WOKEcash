@@ -13,6 +13,11 @@
   <property name="windowTitle">
    <string>Edit Address</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">color: rgb(0,0,0);
+background: white;
+</string>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <layout class="QFormLayout" name="formLayout">

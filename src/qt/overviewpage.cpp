@@ -1,5 +1,6 @@
 #include "overviewpage.h"
 #include "ui_overviewpage.h"
+#include "qwidget.h"
 
 #include "walletmodel.h"
 #include "bitcoinunits.h"
@@ -8,15 +9,18 @@
 #include "transactionfilterproxy.h"
 #include "guiutil.h"
 #include "guiconstants.h"
+#include <QPixmap>
 
 #include <QAbstractItemDelegate>
 #include <QPainter>
+#include <QWidget>
 
 #define DECORATION_SIZE 64
 #define NUM_ITEMS 3
 
 class TxViewDelegate : public QAbstractItemDelegate
 {
+
     Q_OBJECT
 public:
     TxViewDelegate(): QAbstractItemDelegate(), unit(BitcoinUnits::BTC)
@@ -87,11 +91,15 @@ public:
     int unit;
 
 };
+
 #include "overviewpage.moc"
 
 OverviewPage::OverviewPage(QWidget *parent) :
     QWidget(parent),
+
+
     ui(new Ui::OverviewPage),
+
     currentBalance(-1),
     currentStake(0),
     currentUnconfirmedBalance(-1),
@@ -99,8 +107,9 @@ OverviewPage::OverviewPage(QWidget *parent) :
     txdelegate(new TxViewDelegate()),
     filter(0)
 {
-    ui->setupUi(this);
 
+    ui->setupUi(this);
+    ui->groupBox->setStyleSheet("QGroupBox#groupBox{border-image: url(:/images/mymain) 0 0 0 0 stretch stretch;background: transparent}");
     // Recent transactions
     ui->listTransactions->setItemDelegate(txdelegate);
     ui->listTransactions->setIconSize(QSize(DECORATION_SIZE, DECORATION_SIZE));
@@ -116,7 +125,6 @@ OverviewPage::OverviewPage(QWidget *parent) :
     // start with displaying the "out of sync" warnings
     showOutOfSyncWarning(true);
 }
-
 void OverviewPage::handleTransactionClicked(const QModelIndex &index)
 {
     if(filter)
@@ -146,6 +154,8 @@ void OverviewPage::setBalance(qint64 balance, qint64 stake, qint64 unconfirmedBa
     bool showImmature = immatureBalance != 0;
     ui->labelImmature->setVisible(showImmature);
     ui->labelImmatureText->setVisible(showImmature);
+    setStyleSheet("QWidget#OverviewPage{border-image: url(:/images/mymain) 0 0 0 0 stretch stretch;background: transparent}");
+
 }
 
 void OverviewPage::setModel(WalletModel *model)

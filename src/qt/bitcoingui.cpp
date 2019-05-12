@@ -77,6 +77,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     rpcConsole(0),
     nWeight(0)
 {
+    setStyleSheet("QWidget#OverviewPage{border-image: url(:/images/mymain) 0 0 0 0 stretch stretch;background: transparent}");
     resize(850, 550);
     setWindowTitle(tr("WOKE") + " - " + tr("Wallet"));
 #ifndef Q_OS_MAC
@@ -103,6 +104,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
 
     // Create tabs
     overviewPage = new OverviewPage();
+    setStyleSheet("QWidget#OverviewPage{border-image: url(:/images/mymain) 0 0 0 0 stretch stretch;background: transparent}");
 
     transactionsPage = new QWidget(this);
     QVBoxLayout *vbox = new QVBoxLayout();
@@ -125,6 +127,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     centralWidget->addWidget(receiveCoinsPage);
     centralWidget->addWidget(sendCoinsPage);
     setCentralWidget(centralWidget);
+    setStyleSheet("QWidget#OverviewPage{border-image: url(:/images/mymain) 0 0 0 0 stretch stretch;background: transparent}");
 
     // Create status bar
     statusBar();

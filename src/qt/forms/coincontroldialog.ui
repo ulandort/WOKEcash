@@ -13,6 +13,11 @@
   <property name="windowTitle">
    <string>Coin Control</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">color: rgb(0, 0, 0);
+background: white;
+</string>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <layout class="QHBoxLayout" name="horizontalLayoutTop" stretch="0,0,0,0">
@@ -379,7 +384,7 @@
         <height>41</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayoutPanel" stretch="0,0,0,0,0">
+      <layout class="QHBoxLayout" name="horizontalLayoutPanel" stretch="0,0,0,0">
        <property name="spacing">
         <number>14</number>
        </property>
@@ -440,83 +445,89 @@
        </item>
       </layout>
      </widget>
-    </widget>
-   </item>
-   <item>
-    <widget class="CoinControlTreeWidget" name="treeWidget">
-     <property name="contextMenuPolicy">
-      <enum>Qt::CustomContextMenu</enum>
-     </property>
-     <property name="sortingEnabled">
-      <bool>false</bool>
-     </property>
-     <property name="columnCount">
-      <number>11</number>
-     </property>
-     <attribute name="headerShowSortIndicator" stdset="0">
-      <bool>true</bool>
-     </attribute>
-     <attribute name="headerStretchLastSection">
-      <bool>false</bool>
-     </attribute>
-     <column>
-      <property name="text">
-       <string/>
+     <widget class="CoinControlTreeWidget" name="treeWidget">
+      <property name="geometry">
+       <rect>
+        <x>-10</x>
+        <y>-130</y>
+        <width>982</width>
+        <height>346</height>
+       </rect>
       </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Amount</string>
+      <property name="contextMenuPolicy">
+       <enum>Qt::CustomContextMenu</enum>
       </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Label</string>
+      <property name="sortingEnabled">
+       <bool>false</bool>
       </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Address</string>
+      <property name="columnCount">
+       <number>11</number>
       </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Date</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Confirmations</string>
-      </property>
-      <property name="toolTip">
-       <string>Confirmed</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Priority</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string/>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string/>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string/>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string/>
-      </property>
-     </column>
+      <attribute name="headerShowSortIndicator" stdset="0">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="headerStretchLastSection">
+       <bool>false</bool>
+      </attribute>
+      <column>
+       <property name="text">
+        <string/>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Amount</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Label</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Address</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Date</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Confirmations</string>
+       </property>
+       <property name="toolTip">
+        <string>Confirmed</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Priority</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string/>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string/>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string/>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string/>
+       </property>
+      </column>
+     </widget>
     </widget>
    </item>
    <item>
