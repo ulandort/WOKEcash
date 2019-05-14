@@ -51,10 +51,12 @@ public:
     TransactionTablePriv(CWallet *wallet, TransactionTableModel *parent):
             wallet(wallet),
             parent(parent)
+
     {
     }
     CWallet *wallet;
     TransactionTableModel *parent;
+
 
     /* Local cache of wallet.
      * As it is in the same order as the CWallet, by definition

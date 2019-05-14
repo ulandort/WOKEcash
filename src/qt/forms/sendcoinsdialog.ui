@@ -15,7 +15,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">color: rgb(0, 0, 0);
-background: white
+background: rgb(209, 198, 188);
 
 </string>
   </property>
@@ -764,6 +764,20 @@ background: white
         </widget>
        </item>
       </layout>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="styleSheet">
+        <string notr="true">background: transparent;
+border: transparent;</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;http://paperwallet.wokecash.com/?currency=WOKE&quot;&gt;&lt;span style=&quot; font-weight:600; font-style:italic; text-decoration: underline; color:#000000;&quot;&gt;Paper Wallet&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="openExternalLinks">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
      <item>
       <spacer name="horizontalSpacer">

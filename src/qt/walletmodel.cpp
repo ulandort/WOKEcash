@@ -33,6 +33,7 @@ WalletModel::WalletModel(CWallet *wallet, OptionsModel *optionsModel, QObject *p
 
 WalletModel::~WalletModel()
 {
+
     unsubscribeFromCoreSignals();
 }
 

@@ -325,12 +325,13 @@ void AddressBookPage::exportClicked()
     writer.setModel(proxyModel);
     writer.addColumn("Label", AddressTableModel::Label, Qt::EditRole);
     writer.addColumn("Address", AddressTableModel::Address, Qt::EditRole);
-
+    setStyleSheet("background:rgb(209, 198, 188);");
     if(!writer.write())
     {
         QMessageBox::critical(this, tr("Error exporting"), tr("Could not write to file %1.").arg(filename),
                               QMessageBox::Abort, QMessageBox::Abort);
     }
+
 }
 
 void AddressBookPage::on_showQRCode_clicked()

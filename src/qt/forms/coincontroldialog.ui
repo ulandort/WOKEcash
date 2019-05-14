@@ -15,8 +15,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">color: rgb(0, 0, 0);
-background: white;
-</string>
+background: rgb(209, 198, 188)</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -375,159 +374,153 @@ background: white;
      <property name="frameShadow">
       <enum>QFrame::Sunken</enum>
      </property>
-     <widget class="QWidget" name="horizontalLayoutWidget">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>0</y>
-        <width>781</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayoutPanel" stretch="0,0,0,0">
-       <property name="spacing">
-        <number>14</number>
-       </property>
-       <item>
-        <widget class="QPushButton" name="pushButtonSelectAll">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="CoinControlTreeWidget" name="treeWidget">
+        <property name="contextMenuPolicy">
+         <enum>Qt::CustomContextMenu</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background:rgb(209, 198, 188);</string>
+        </property>
+        <property name="alternatingRowColors">
+         <bool>true</bool>
+        </property>
+        <property name="sortingEnabled">
+         <bool>false</bool>
+        </property>
+        <property name="columnCount">
+         <number>11</number>
+        </property>
+        <attribute name="headerShowSortIndicator" stdset="0">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="headerStretchLastSection">
+         <bool>false</bool>
+        </attribute>
+        <column>
          <property name="text">
-          <string>(un)select all</string>
+          <string/>
          </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioTreeMode">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
+        </column>
+        <column>
          <property name="text">
-          <string>Tree mode</string>
+          <string>Amount</string>
          </property>
-         <property name="checked">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioListMode">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
+        </column>
+        <column>
          <property name="text">
-          <string>List mode</string>
+          <string>Label</string>
          </property>
-        </widget>
-       </item>
-       <item>
-        <spacer name="horizontalSpacer">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
+        </column>
+        <column>
+         <property name="text">
+          <string>Address</string>
          </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>40</width>
-           <height>20</height>
-          </size>
+        </column>
+        <column>
+         <property name="text">
+          <string>Date</string>
          </property>
-        </spacer>
-       </item>
-      </layout>
-     </widget>
-     <widget class="CoinControlTreeWidget" name="treeWidget">
-      <property name="geometry">
-       <rect>
-        <x>-10</x>
-        <y>-130</y>
-        <width>982</width>
-        <height>346</height>
-       </rect>
-      </property>
-      <property name="contextMenuPolicy">
-       <enum>Qt::CustomContextMenu</enum>
-      </property>
-      <property name="sortingEnabled">
-       <bool>false</bool>
-      </property>
-      <property name="columnCount">
-       <number>11</number>
-      </property>
-      <attribute name="headerShowSortIndicator" stdset="0">
-       <bool>true</bool>
-      </attribute>
-      <attribute name="headerStretchLastSection">
-       <bool>false</bool>
-      </attribute>
-      <column>
-       <property name="text">
-        <string/>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Amount</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Label</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Address</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Date</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Confirmations</string>
-       </property>
-       <property name="toolTip">
-        <string>Confirmed</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Priority</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string/>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string/>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string/>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string/>
-       </property>
-      </column>
-     </widget>
+        </column>
+        <column>
+         <property name="text">
+          <string>Confirmations</string>
+         </property>
+         <property name="toolTip">
+          <string>Confirmed</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Priority</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string/>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string/>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string/>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string/>
+         </property>
+        </column>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayoutPanel" stretch="0,0,0,0">
+        <property name="spacing">
+         <number>14</number>
+        </property>
+        <item>
+         <widget class="QPushButton" name="pushButtonSelectAll">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>(un)select all</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioTreeMode">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Tree mode</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioListMode">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>List mode</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+     </layout>
     </widget>
    </item>
    <item>

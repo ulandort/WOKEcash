@@ -17,12 +17,15 @@
    <double>1.000000000000000</double>
   </property>
   <property name="autoFillBackground">
-   <bool>true</bool>
+   <bool>false</bool>
   </property>
   <property name="styleSheet">
    <string notr="true">background: rgb(209, 198, 188);</string>
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
    <property name="leftMargin">
     <number>0</number>
    </property>
@@ -300,6 +303,9 @@ background: transparent
        <layout class="QVBoxLayout" name="verticalLayout_3">
         <item>
          <widget class="QFrame" name="frame_2">
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
           <property name="styleSheet">
            <string notr="true">background: transparent</string>
           </property>
@@ -366,6 +372,19 @@ background: transparent
              </property>
              <property name="selectionMode">
               <enum>QAbstractItemView::NoSelection</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_2">
+             <property name="layoutDirection">
+              <enum>Qt::RightToLeft</enum>
+             </property>
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;a href=&quot;http://www.wokecash.com&quot;&gt;&lt;span style=&quot; font-weight:600; font-style:italic; text-decoration: underline; color:#000000;&quot;&gt; Official Site  &lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="openExternalLinks">
+              <bool>true</bool>
              </property>
             </widget>
            </item>

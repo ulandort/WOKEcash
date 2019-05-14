@@ -14,7 +14,8 @@
    <string>QR Code Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">color: rgb(0, 0, 0)
+   <string notr="true">color: rgb(0, 0, 0);
+background: rgb(209, 198, 188);
 </string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_3">

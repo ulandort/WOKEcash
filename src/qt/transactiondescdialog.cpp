@@ -10,6 +10,7 @@ TransactionDescDialog::TransactionDescDialog(const QModelIndex &idx, QWidget *pa
     ui(new Ui::TransactionDescDialog)
 {
     ui->setupUi(this);
+    setStyleSheet("background:rgb(209, 198, 188);");
     QString desc = idx.data(TransactionTableModel::LongDescriptionRole).toString();
     ui->detailText->setHtml(desc);
 }

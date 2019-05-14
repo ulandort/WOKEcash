@@ -77,7 +77,6 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     rpcConsole(0),
     nWeight(0)
 {
-    setStyleSheet("QWidget#OverviewPage{border-image: url(:/images/mymain) 0 0 0 0 stretch stretch;background: transparent}");
     resize(850, 550);
     setWindowTitle(tr("WOKE") + " - " + tr("Wallet"));
 #ifndef Q_OS_MAC
@@ -104,7 +103,6 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
 
     // Create tabs
     overviewPage = new OverviewPage();
-    setStyleSheet("QWidget#OverviewPage{border-image: url(:/images/mymain) 0 0 0 0 stretch stretch;background: transparent}");
 
     transactionsPage = new QWidget(this);
     QVBoxLayout *vbox = new QVBoxLayout();
@@ -127,7 +125,6 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     centralWidget->addWidget(receiveCoinsPage);
     centralWidget->addWidget(sendCoinsPage);
     setCentralWidget(centralWidget);
-    setStyleSheet("QWidget#OverviewPage{border-image: url(:/images/mymain) 0 0 0 0 stretch stretch;background: transparent}");
 
     // Create status bar
     statusBar();
@@ -152,6 +149,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     frameBlocksLayout->addStretch();
     frameBlocksLayout->addWidget(labelBlocksIcon);
     frameBlocksLayout->addStretch();
+    frameBlocks->setStyleSheet("background:rgb(209, 198, 188);");
 
     if (GetBoolArg("-staking", true))
     {
@@ -174,7 +172,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     QString curStyle = qApp->style()->metaObject()->className();
     if(curStyle == "QWindowsStyle" || curStyle == "QWindowsXPStyle")
     {
-        progressBar->setStyleSheet("QProgressBar { background-color: #e8e8e8; border: 1px solid grey; border-radius: 7px; padding: 1px; text-align: center; } QProgressBar::chunk { background: QLinearGradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #FF8000, stop: 1 orange); border-radius: 7px; margin: 0px; }");
+        progressBar->setStyleSheet("QProgressBar { background-color: rgb(209, 198, 188); color: rgb(209, 198, 188); border: 1px #D1C6BC; border-radius: 7px; padding: 1px; text-align: center; } QProgressBar::chunk { background: QLinearGradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #FF8000, stop: 1 orange); border-radius: 7px; margin: 0px; }");
     }
 
     statusBar()->addWidget(progressBarLabel);
@@ -213,13 +211,11 @@ BitcoinGUI::~BitcoinGUI()
 void BitcoinGUI::createActions()
 {
     QActionGroup *tabGroup = new QActionGroup(this);
-
     overviewAction = new QAction(QIcon(":/icons/overview"), tr("&Overview"), this);
     overviewAction->setToolTip(tr("Show general overview of wallet"));
     overviewAction->setCheckable(true);
     overviewAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_1));
     tabGroup->addAction(overviewAction);
-
     sendCoinsAction = new QAction(QIcon(":/icons/send"), tr("&Send coins"), this);
     sendCoinsAction->setToolTip(tr("Send coins to a WOKE address"));
     sendCoinsAction->setCheckable(true);
@@ -243,7 +239,6 @@ void BitcoinGUI::createActions()
     addressBookAction->setCheckable(true);
     addressBookAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_5));
     tabGroup->addAction(addressBookAction);
-
     connect(overviewAction, SIGNAL(triggered()), this, SLOT(showNormalIfMinimized()));
     connect(overviewAction, SIGNAL(triggered()), this, SLOT(gotoOverviewPage()));
     connect(sendCoinsAction, SIGNAL(triggered()), this, SLOT(showNormalIfMinimized()));
@@ -311,7 +306,7 @@ void BitcoinGUI::createMenuBar()
     // Get the main window's menu bar on other platforms
     appMenuBar = menuBar();
 #endif
-
+    setStyleSheet("background:rgb(209, 198, 188);");
     // Configure the menus
     QMenu *file = appMenuBar->addMenu(tr("&File"));
     file->addAction(backupWalletAction);
@@ -320,6 +315,7 @@ void BitcoinGUI::createMenuBar()
     file->addAction(verifyMessageAction);
     file->addSeparator();
     file->addAction(quitAction);
+    file->setStyleSheet("background:rgb(209, 198, 188);");
 
     QMenu *settings = appMenuBar->addMenu(tr("&Settings"));
     settings->addAction(encryptWalletAction);
@@ -328,12 +324,15 @@ void BitcoinGUI::createMenuBar()
     settings->addAction(lockWalletAction);
     settings->addSeparator();
     settings->addAction(optionsAction);
+    settings->setStyleSheet("background:rgb(209, 198, 188);");
 
     QMenu *help = appMenuBar->addMenu(tr("&Help"));
     help->addAction(openRPCConsoleAction);
     help->addSeparator();
     help->addAction(aboutAction);
     help->addAction(aboutQtAction);
+    help->setStyleSheet("background:rgb(209, 198, 188);");
+
 }
 
 void BitcoinGUI::createToolBars()
@@ -345,10 +344,12 @@ void BitcoinGUI::createToolBars()
     toolbar->addAction(receiveCoinsAction);
     toolbar->addAction(historyAction);
     toolbar->addAction(addressBookAction);
+    toolbar->setStyleSheet("background:rgb(209, 198, 188);");
 
     QToolBar *toolbar2 = addToolBar(tr("Actions toolbar"));
     toolbar2->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
     toolbar2->addAction(exportAction);
+    toolbar2->setStyleSheet("background:rgb(209, 198, 188);");
 }
 
 void BitcoinGUI::setClientModel(ClientModel *clientModel)

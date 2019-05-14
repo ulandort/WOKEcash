@@ -14,7 +14,8 @@
    <string>Signatures - Sign / Verify a Message</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">color: rgb(0, 0, 0)
+   <string notr="true">color: rgb(0, 0, 0);
+background: rgb(209, 198, 188);
 </string>
   </property>
   <property name="modal">
@@ -24,7 +25,7 @@
    <item>
     <widget class="QTabWidget" name="tabWidget">
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="tabSignMessage">
       <attribute name="title">
@@ -313,6 +314,9 @@
           <widget class="QPushButton" name="clearButton_VM">
            <property name="toolTip">
             <string>Reset all verify message fields</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background: rgb(209, 198, 188)</string>
            </property>
            <property name="text">
             <string>Clear &amp;All</string>

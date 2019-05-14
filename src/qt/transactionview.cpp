@@ -35,7 +35,7 @@ TransactionView::TransactionView(QWidget *parent) :
 {
     // Build filter row
     setContentsMargins(0,0,0,0);
-
+    setStyleSheet("background:rgb(209, 198, 188);");
     QHBoxLayout *hlayout = new QHBoxLayout();
     hlayout->setContentsMargins(0,0,0,0);
 #ifdef Q_OS_MAC
@@ -131,6 +131,7 @@ TransactionView::TransactionView(QWidget *parent) :
     QAction *showDetailsAction = new QAction(tr("Show transaction details"), this);
 
     contextMenu = new QMenu();
+    contextMenu->setStyleSheet("alternate-background-color:rgb(209, 198, 188);");
     contextMenu->addAction(copyAddressAction);
     contextMenu->addAction(copyLabelAction);
     contextMenu->addAction(copyAmountAction);
@@ -170,6 +171,7 @@ void TransactionView::setModel(WalletModel *model)
 
         transactionView->setModel(transactionProxyModel);
         transactionView->setAlternatingRowColors(true);
+        transactionView->setStyleSheet("alternate-background-color: rgb(209, 198, 188);");
         transactionView->setSelectionBehavior(QAbstractItemView::SelectRows);
         transactionView->setSelectionMode(QAbstractItemView::ExtendedSelection);
         transactionView->setSortingEnabled(true);
@@ -302,6 +304,7 @@ void TransactionView::contextualMenu(const QPoint &point)
     if(index.isValid())
     {
         contextMenu->exec(QCursor::pos());
+
     }
 }
 

@@ -15,7 +15,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">color: rgb(0,0,0);
-background: white
+background: rgb(209, 198, 188)
 </string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
@@ -39,6 +39,9 @@ background: white
      </property>
      <property name="toolTip">
       <string>Double-click to edit address or label</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background:rgb(209, 198, 188);</string>
      </property>
      <property name="tabKeyNavigation">
       <bool>false</bool>
@@ -125,7 +128,7 @@ background: white
        </property>
        <property name="icon">
         <iconset resource="../bitcoin.qrc">
-         <normaloff>:/icons/transaction_0</normaloff>:/icons/transaction_0</iconset>
+         <normaloff>:/icons/key</normaloff>:/icons/key</iconset>
        </property>
       </widget>
      </item>
